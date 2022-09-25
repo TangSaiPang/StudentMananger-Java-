@@ -199,12 +199,28 @@ public class Test {
         Scanner scan = new Scanner(System.in);
 
         //1. 用键盘录入选择添加学生
-        System.out.println("请输入学号：");
-        String sid = scan.next();
+        String sid;
+        //1. 用键盘录入选择添加学生
+        while(true) {
+            System.out.println("请输入学号：");
+            sid = scan.next();
+
+            int index = getIndex(list, sid);
+
+            if(index == -1){
+                //sid不存在，学号可以使用
+                break;
+            }
+
+            System.out.println("学号已占用，请重新输入");
+        }
+        
         System.out.println("请输入姓名：");
         String name = scan.next();
+        
         System.out.println("请输入年龄：");
         int age = scan.nextInt();
+        
         System.out.println("请输入生日：");
         String birthday = scan.next();
 
