@@ -1,2 +1,5 @@
-# StudentMananger (Java)
-These are what I learnt and wrote.
+# 师生管理系统
+
+## Version 1.0
+
+本版本目前只有学生管理
